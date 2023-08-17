@@ -1,0 +1,379 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*  ################################ */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ################### */
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+
+  /* ### Neutral */
+
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayishblue: hsl(236, 13%, 42%);
+  --Very-darkblue: hsl(240, 100%, 5%);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+html {
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  max-width: 120rem;
+  margin: auto;
+}
+.container {
+  margin: 6rem 2rem;
+}
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 3rem;
+  position: relative;
+}
+nav img {
+  width: 6rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.container nav li a {
+  color: var(--Dark-grayishblue);
+}
+
+.container nav li a:hover {
+  color: var(--Soft-orange);
+  cursor: pointer;
+}
+
+main {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.featurePost {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 2;
+}
+
+.featurePost picture {
+  grid-column: span 2;
+}
+
+.featurePost img {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.featurePost h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.info p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 2.5rem 0;
+}
+
+.info a,
+.info a:hover {
+  text-decoration: none;
+}
+
+.info a span {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Soft-red);
+  color: var(--Off-white);
+  width: 15rem;
+  height: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 2rem 0;
+}
+
+aside {
+  background-color: var(--Very-darkblue);
+  margin: 0 0 0 2rem;
+  color: var(--Off-white);
+  padding-top: 1rem;
+}
+
+aside h2 {
+  margin: 2rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--Soft-orange);
+}
+
+aside a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+aside a div h3 {
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--Off-white);
+}
+
+aside a:hover div h3 {
+  color: var(--Soft-orange);
+}
+
+aside a:last-child div {
+  padding-bottom: 4rem;
+}
+
+aside a div p {
+  margin: 2rem;
+  font-weight: 700;
+  color: var(--Dark-grayishblue);
+  padding-bottom: 4rem;
+  border-bottom: 2px solid var(--Dark-grayishblue);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+section a {
+  text-decoration: none;
+}
+
+section a:hover .card h3 {
+  color: var(--Soft-red);
+}
+
+.card {
+  display: flex;
+  margin: 2rem 0;
+}
+.card img {
+  width: 13rem;
+  height: 15rem;
+}
+
+.card-body {
+  margin: 0 2rem;
+}
+
+.card-body h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--Grayish-blue);
+  margin-bottom: 1rem;
+}
+.card-body h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--Very-darkblue);
+}
+
+.card-body p {
+  font-weight: 900;
+  line-height: 1.8;
+  color: var(--Dark-grayishblue);
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+}
+
+.menu img {
+  width: 4rem;
+}
+
+.menu-mobile {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 30rem;
+  right: 0px;
+  top: 0px;
+  background-color: var(--Off-white);
+  position: fixed;
+  box-shadow: 1px 0 1px 3000px rgba(9, 11, 33, 0.641);
+}
+
+.menu-mobile img {
+  display: block;
+  width: 4rem;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+.menu-mobile-list {
+  display: block;
+  margin: 20rem 3rem;
+}
+
+.menu-mobile-list li {
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.menu-mobile-list li > a {
+  color: var(--Very-darkblue) !important;
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    display: block;
+  }
+  aside {
+    margin: 0;
+  }
+
+  nav .main-menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .featurePost {
+    display: block;
+  }
+  section {
+    grid-template-columns: 1fr;
+  }
+}
