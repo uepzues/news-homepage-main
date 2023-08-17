@@ -204,6 +204,10 @@ main {
   text-decoration: none;
 }
 
+.info a span:hover {
+  background-color: var(--Very-darkblue);
+}
+
 .info a span {
   font-weight: 700;
   display: flex;
