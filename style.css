@@ -1,4 +1,3 @@
-
 /*  ################################ */
 
 .attribution {
@@ -283,6 +282,10 @@ a {
 @media screen and (max-width: 900px) {
   .featurePost {
     display: block;
+  }
+  .featurePost h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   section {
     grid-template-columns: 1fr;
